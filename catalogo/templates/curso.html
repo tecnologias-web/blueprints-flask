@@ -1,0 +1,28 @@
+{% extends 'modelo.html' %}
+
+{% block titulo %} Início {% endblock %}
+
+{% block conteudo %}
+    <div class="jumbotron">
+        <h1 class="display-4">{{ curso.nome }}</h1>
+        <p class="lead">{{ curso.desc }}</p>
+    </div>
+    <section class="container container-fluid">
+        <h1>Sobre o Curso</h1>
+        <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+            Fusce tristique congue sapien, id pretium sem cursus ac.
+            Etiam gravida risus vitae arcu pretium, quis fermentum risus gravida.
+            Quisque eget gravida dui. Suspendisse mi enim, tristique eu pharetra
+            id, rutrum ut risus. Suspendisse condimentum interdum augue, in bibendum
+            nisi fringilla ut. Morbi id eros viverra, bibendum massa quis, convallis
+            lectus. Curabitur lorem leo, ornare ut nisi et, tempor laoreet ex.
+            Etiam ac nisl tellus. Donec condimentum vulputate laoreet.
+            Sed quis mi diam. Maecenas consequat gravida mi eget euismod.
+            Class aptent taciti sociosqu ad litora torquent per conubia nostra,
+            per inceptos himenaeos. Donec eget tellus eu sapien placerat accumsan
+            eget ut sem. Donec tristique erat justo, vel porttitor orci mollis eget.
+            Fusce pulvinar sodales orci a ullamcorper.
+        </p>
+    </section>
+{% endblock %}

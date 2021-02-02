@@ -5,8 +5,23 @@
 {% block conteudo %}
     <div class="jumbotron">
         <h1 class="display-4">Bem vindo(a) a Escola Online!</h1>
-        <p class="lead">Temos muitos cursos de tencologia, completamente online para você!</p>
-        <hr class="my-4">
-        <a class="btn btn-primary btn-lg" href="#" role="button">Veja nossos Cursos!</a>
+        <p class="lead">Temos muitos cursos de tecnologia, completamente online para você!</p>
     </div>
+    <section class="container container-fluid">
+        <h1>Nossos Cursos</h1>
+        <div class="card-deck">
+            {% for curso in cursos %}
+                <div class="card" style="width: 18rem;">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ curso.nome }}</h5>
+                        <h6 class="card-subtitle mb-2 text-muted">{{ curso.tipo }}</h6>
+                        <p class="card-text">{{ curso.desc }}</p>
+                        <a href="{{ url_for('catalogo.curso', slug=curso.slug) }}" class="card-link">
+                            Detalhes
+                        </a>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </section>
 {% endblock %}
